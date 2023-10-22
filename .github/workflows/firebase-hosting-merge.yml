@@ -11,10 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Change Directory to servers/firebase
-        run: cd servers/firebase
-      - name: Building Quasar
-        run: npm i && npm run build
+      - run: npm i 
         env:
           VUE_APP_FIREBASE_API_KEY: ${{ secrets.VUE_APP_FIREBASE_API_KEY }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
