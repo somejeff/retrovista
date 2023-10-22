@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Change Directory to /servers/firebase
-        run: cd /servers/firebase
+      - name: Change Directory to servers/firebase
+        run: cd servers/firebase
       - name: Building Quasar
         run: npm ci && npm run build
       - run: npm ci && npm run build
