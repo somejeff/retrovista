@@ -11,6 +11,8 @@
 const { configure } = require("quasar/wrappers");
 
 module.exports = configure(function (/* ctx */) {
+  // https://quasar.dev/quasar-cli-webpack/handling-process-env
+  require("dotenv").config()
   return {
     eslint: {
       // fix: true,
@@ -62,7 +64,9 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      env: require("dotenv").config().parsed,
+      env: {
+        VUE_APP_FIREBASE_API_KEY: process.env.VUE_APP_FIREBASE_API_KEY
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,

@@ -10,10 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm i 
+        env:
+          VUE_APP_FIREBASE_API_KEY: ${{ secrets.VUE_APP_FIREBASE_API_KEY }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           entryPoint: ./servers/firebase
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          VUE_APP_FIREBASE_API_KEY: ${{ secrets.VUE_APP_FIREBASE_API_KEY }}
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RETRO_VISTA }}'
           projectId: retro-vista
