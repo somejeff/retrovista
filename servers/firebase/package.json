@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "pinia": "^2.1.7",
     "quasar": "^2.6.0",
     "rgbquant": "^1.1.2",
     "uuid": "^9.0.1",

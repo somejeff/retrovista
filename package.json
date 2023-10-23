@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Synchronized display of imagery across multiple digital photo frames",
   "scripts": {
-    "postinstall": "(cd servers/firebase && npm ci && npm run build)"
+    "postinstall": "(cd servers/firebase && npm i && npm run build)"
   },
   "author": "Jeffrey Lee",
   "license": "MIT"
